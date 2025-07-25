@@ -1,0 +1,237 @@
+/* Paleta Naruto */
+:root {
+  --sage-scroll: #f7f5cb;
+  --chakra-flame: #f89a3a;
+  --leaf-green: #4b814b;
+  --uchiha-ember: #8c2f2f;
+  --midnight-shinobi: #2a2a42;
+  --kyuubi-shadow: #1b1b1b;
+  --font-color: #f7f5cb;
+  --link-hover: #f89a3a;
+}
+
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--midnight-shinobi);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, main, footer {
+  padding: 20px;
+  border: 2px solid var(--chakra-flame);
+  margin: 10px;
+  border-radius: 8px;
+}
+
+header {
+  background-color: var(--midnight-shinobi);
+  text-align: center;
+}
+
+main {
+  background-color: var(--leaf-green);
+}
+
+footer {
+  background-color: var(--uchiha-ember);
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2rem;
+  color: var(--chakra-flame);
+}
+
+h2 {
+    margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--sage-scroll);
+  margin-bottom: 10px;
+}
+
+/* Classes e IDs adicionais */
+.destaque {
+  font-style: italic;
+  background-color: var(--midnight-shinobi);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#importante {
+  margin-top: 5px;
+  border-top: 1px solid var(--chakra-flame);
+  padding-top: 10px;
+}
+
+a {
+  color: var(--sage-scroll);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/*Estilo do Formulário Horizontal */
+
+.form-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.form-group button {
+  padding: 0.7rem 1.5rem;
+  background-color: #c7392f; 
+  color: #fff;
+  border: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-group button:hover {
+  background-color: #a72d26;
+}
+
+/*Galeria com Grid + Flexbox */
+
+.galeria-container {
+ display: flex;
+ justify-content: center;
+ padding: 2rem;
+}
+
+.galeria {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 1.5rem;
+ width: 100%;
+ max-width: 1000px;
+}
+
+.galeria figure {
+ background-color: #fff;
+ border-radius: 8px;
+ overflow: hidden;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ text-align: center;
+ transition: transform 0.2s ease-in-out; /* Adicionado para suavizar a animação */
+}
+
+.galeria figure:hover {
+ transform: scale(1.05); /* Aumentei um pouco o efeito */
+}
+
+.galeria img {
+ width: 100%;
+ height: 250px; /* Define uma altura fixa para todas as imagens */
+ object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+ display: block;
+}
+
+.galeria figcaption {
+ padding: 0.75rem; /* Aumentei um pouco o padding */
+ background-color: #1a1a2e; /* Usei uma cor sólida caso a variável não esteja definida */
+ color: #fff;
+ font-weight: bold;
+}
+
+* Estilo base para menu */
+.navbar {
+  background-color: var(--cor-secundaria);
+  padding: 0.5rem 1rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: var(--cor-destaque);
+  color: #000;
+}
+
+/* Botão hamburger visível apenas em telas pequenas */
+.menu-toggle {
+  display: none;
+  background-color: var(--cor-destaque);
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--cor-secundaria);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+
+  .menu.menu-aberto {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

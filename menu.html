@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Responsivo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/menu.css" />
+</head>
+<body>
+  <header>
+    <h1>Menu Ninja 🍥</h1>
+    <p class="destaque">Acesse as páginas do nosso universo ninja!</p>
+  </header>
+
+  <nav class="navbar">
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="lista.html">Listas</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Bem-vindo!</h2>
+      <p id="importante">Explore nosso site usando o menu acima. Em telas pequenas, use o botão ☰ para abrir o menu.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Todos os direitos reservados. Dattebayo!</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("menu-aberto");
+    });
+  </script>
+</body>
+</html>
